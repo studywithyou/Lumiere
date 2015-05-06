@@ -28,6 +28,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="/">Página principal</a></li>
+                            <li><a href="/" class="link-wait-connection">Esperar por uma conexão</a></li>
                             <li><a href="https://github.com/EvandroZanatta/Lumiere">Github</a></li>
                             <li><a href="/sobre.html">Sobre</a></li>
                         </ul>
@@ -39,15 +40,21 @@
         <section class="section">
             
             <div class="container forms-connection">
-            
-                <div class="callto-area col-lg-4 col-lg-offset-2">
+                
+                <div class="banner-titles col-sm-6 col-sm-offset-1">
+                    <h1>Lumière</h1>
+                    <p class="lead hidden-xs">Converse em tempo real com seus amigos.</p>
+                    <p class="lead hidden-xs">Faça uma chamada de video para seus amigos e converse a vontade, por quanto tempo quiser, sem login e sem pagar nada.</p>
+                </div>
+                
+                <div class="callto-area col-sm-4">
                     <div class="panel panel-success">
                         <div class="panel-heading">
                             <h3 class="panel-title">Conectar a um amigo</h3>
                         </div>
                         <div class="panel-body">
                                 
-                            <div class="form-group">
+                            <div class="form-group has-success">
                                 <label class="control-label" for="focusedInput">Ligar para o ID:</label>
                                 <input class="form-control id-to-call" id="callto-id" type="text" value="" placeholder="Insira o ID aqui">
                             </div>
@@ -63,28 +70,37 @@
                             </div>
                             
                             <div class="form-group">
-                                    <button type="submit" id="make-call" class="btn btn-success">Ligar</button>
+                                    <button type="submit" id="make-call" class="btn btn-success btn-lg col-xs-12">Ligar</button>
                             </div>
                     
                         </div><!-- Panel body --> 
                     </div><!-- Panel -->
                 </div><!-- Callto area -->
                 
-                <div class="callwait-area col-lg-4">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Esperar por conexão</h3>
-                        </div>
-                        <div class="panel-body">
-                            Forneca o ID <span class="text-primary"><strong class="my-id">###</strong></span> para um amigo conectar-se com você ou o link 
-                            <span class="text-primary link-connection">http://lumiere-evandrozanatta.c9.io/index.html?friend_id=<span class="my-id">###</span></span>
-                        </div><!-- Panel body -->
-                    </div><!-- Painel -->
-                </div><!-- Callwait area -->
-            
+                
             </div><!-- forms-connection -->
             
-            <div class="container more-info-box">
+            
+            
+        </section> <!-- Section -->
+        
+        
+        
+        <!--- old source -->
+<div class="conteudo antigo" style="display: none">
+        <div class="callwait-area col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Esperar por conexão</h3>
+                </div>
+                <div class="panel-body">
+                    Forneca o ID <span class="text-primary"><strong class="my-id">###</strong></span> para um amigo conectar-se com você ou o link 
+                    <span class="text-primary link-connection">http://lumiere-evandrozanatta.c9.io/index.html?friend_id=<span class="my-id">###</span></span>
+                </div><!-- Panel body -->
+            </div><!-- Painel -->
+        </div><!-- Callwait area -->
+        
+        <div class="container more-info-box">
                 
                 <div class="callwait-area col-lg-offset-2 col-lg-8 more-info">
                     <div class="panel panel-warning">
@@ -107,12 +123,6 @@
                 </div><!-- More info -->
                 
             </div><!-- more-info-box -->
-            
-        </section> <!-- Section -->
-        
-        
-        
-        <!--- old source -->
         
         <div class="pure-g">
             <!-- Video area -->
@@ -148,6 +158,7 @@
                 </div>
             </div>
         </div>
+</div>        
     </body>
     <!-- Jquery -->
     <script type="text/javascript" src="js/jquery/jquery.js"></script>

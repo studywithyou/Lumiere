@@ -4,4 +4,56 @@ button{
 
 .header .navbar{
   background-color: #f3f3f3;
+  margin: 0;
+}
+
+.header .link-wait-connection{
+  color: #2196f3 !important;
+}
+
+.section{
+  background-image: url('https://raw.githubusercontent.com/GetLumiere/LumiereMedia/master/lumiere1024.jpg');
+  background-size: cover;
+  padding: 55px 0;
+}
+
+.banner-titles h1{
+  color: #fff;
+  text-shadow: 2px 2px 3px #444;
+  margin-top: 48px;
+}
+
+.banner-titles > p{
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Arial";
+}
+
+.section .callto-area .panel{
+  margin-bottom: 0;
+}
+
+.section .callto-area input[type="radio"]:before{
+  background-color: #4caf50 !important;
+}
+
+.section .callto-area input[type="radio"],
+.section .callto-area input[type="radio"]:checked:after{
+  border-color: #4caf50 !important;
+}
+
+@media (max-width: 768px) {
+ 
+  .section{
+    padding: 0;
+    padding-bottom: 30px;
+  }
+ 
+  .banner-titles h1{
+    text-align: center;
+    margin-top: 10px;
+  }
+  
 }

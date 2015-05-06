@@ -10,7 +10,7 @@ peer.on('open', function(){
   $('.my-id').text(peer.id);
 });
 
-//##Quando receber uma chamda
+// Receiving a call
 peer.on('call', function(call){
   // Answer the call automatically (instead of prompting user) for demo purposes
   call.answer(window.localStream);
@@ -18,15 +18,15 @@ peer.on('call', function(call){
 });
 peer.on('error', function(err){
   alert(err.message);
-  // Retorna o segundo step quando ocorrer erros
+  // Return to step 2 if error occurs
   step2();
 });
 
 // Click handlers setup
 $(function(){
   $('#make-call').click(function(){
-    // Inicia uma nova chamada!
-      var call = peer.call($('#callto-id').val(), window.localStream);
+    // Initiate a call!
+    var call = peer.call($('#callto-id').val(), window.localStream);
 
     step3(call);
   });
