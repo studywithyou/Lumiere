@@ -60,6 +60,7 @@ function step1 () {
 function step2 () {
   $('#step1, #step3').hide();
   $('#step2').show();
+  $('body').removeClass('page-load');
 }
 
 function step3 (call) {
@@ -79,4 +80,9 @@ function step3 (call) {
   call.on('close', step2);
   $('#step1, #step2').hide();
   $('#step3').show();
+}
+
+function showErrorLoad(){
+  //$('body').removeClass();
+  //$('body').addClass('page-error')
 }

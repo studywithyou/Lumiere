@@ -49,22 +49,7 @@ button{
 }
 
 .section-wait-connection .container{
-  overflow: hidden;  
-}
-
-.section-wait-connection .container:before{
-  content: '';
-  position: relative;
-  display: block;
   
-  width: 90%;
-  height: 129px;
-  top: -130px;
-  
-  
-  box-shadow: 0 0 113px 20px #aaa;
-  margin: 0 auto;
-  border-radius: 100%;
 }
 
 @media (max-width: 768px) {
