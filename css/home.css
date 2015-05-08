@@ -115,4 +115,12 @@ button{
   .footer{
     text-align: center;
   }
+  
+  .footer .ft-logo{
+    margin-top: 25px;
+  }
+  
+  .footer .navbar-brand{
+      float: none;
+  }
 }
