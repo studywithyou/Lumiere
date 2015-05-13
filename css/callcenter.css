@@ -1,5 +1,6 @@
 body .show-alerts{
   display: none;
+  margin-top: 10px;
 }
 
 .section{
@@ -40,9 +41,50 @@ body .show-alerts{
   max-height: 100%;
 }
 
+.menu-functions{
+  z-index: 100;
+  position: relative;
+  background-color: #fff;
+  padding: 10px;
+  top: 20px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.menu-functions #ligar{
+  min-height: 220px;
+}
+
+.friend_invite{
+  display: none;
+  z-index: 41;
+  position: relative;
+  width: 420px;
+  margin: 0 auto;
+  
+  background-color: #fff;
+  padding: 10px;
+  min-height: 148px;
+  top: 20px;
+}
+
+.friend_invite button{
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+
+  .menu-functions{
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+}
+
 .section .callwait-area{
   z-index: 90;
   display: block;
+  display: none;
   width: 30%;
   opacity: 1;
   margin: 0 auto;

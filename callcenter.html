@@ -71,17 +71,49 @@
                 <video id="my-video" muted="true" autoplay></video> 
             </div>
             
-            <div class="callwait-area">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Esperar por conexão</h3>
-                    </div>
-                    <div class="panel-body">
+            <div class="menu-functions">
+                <ul class="nav nav-tabs callcenter-funcoes">
+                  <li class="active"><a href="#home" data-toggle="tab">Esperar por conexão</a></li>
+                  <li><a href="#ligar" data-toggle="tab">Ligar</a></li>
+                </ul>
+                
+                <div id="myTabContent" class="tab-content callcenter-funcoes">
+                    <div class="tab-pane fade active in" id="home">
+                        <br>
                         Forneca o ID <span class="text-primary"><strong class="my-id">###</strong></span> para um amigo conectar-se com você ou o link 
-                        <span class="text-primary link-connection">http://lumiere-evandrozanatta.c9.io/index.html?friend_id=<span class="my-id">###</span></span>
-                    </div><!-- Panel body -->
-                </div><!-- Painel -->
-            </div><!-- Callwait area -->        
+                        <span class="text-primary link-connection">http://lumiere-evandrozanatta.c9.io/callcenter.html?friend_id=<span class="my-id">###</span></span>
+                    </div>
+                
+                
+                    <div class="tab-pane" id="ligar">
+                        <div class="form-group">
+                            <label class="control-label" for="focusedInput">Ligar para o ID:</label>
+                            <input class="form-control id-to-call" id="callto-id" type="text" value="" placeholder="Insira o ID aqui">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="control-label">Confiraçõs de video:</label>
+                            <div class="radio">
+                                <label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Com video</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Sem video</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                                <button type="submit" id="make-call" class="btn btn-primary btn-lg col-xs-12">Ligar</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="friend_invite">
+                <p>Um convite chegou para voce com o id</p>
+                <input class="form-control id-to-call" id="callto-invite-id" type="text" value="" placeholder="Insira o ID aqui">
+                <button type="submit" id="make-invite-call" class="btn btn-primary btn-lg col-xs-12">Aceitar</button>
+            </div>
                 
         </section><!-- section -->
         

@@ -1,3 +1,13 @@
+$.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results==null){
+       return null;
+    }
+    else{
+       return results[1] || 0;
+    }
+}       
+
 // Compatibility shim
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
@@ -26,10 +36,12 @@ peer.on('error', function(err){
 $(function(){
   $('#make-call').click(function(){
     // Inicia uma nova chamada!
-      var call = peer.call($('#callto-id').val(), window.localStream);
+    var call = peer.call($('#callto-id').val(), window.localStream);
 
     step3(call);
   });
+  
+  
 
   $('#end-call').click(function(){
     window.existingCall.close();
@@ -71,6 +83,7 @@ function step3 (call) {
 
   // Wait for stream on the call, then set peer video display
   call.on('stream', function(stream){
+    $(".menu-functions").hide();
     $('#their-video').prop('src', URL.createObjectURL(stream));
   });
 
@@ -86,3 +99,23 @@ function showErrorLoad(){
   //$('body').removeClass();
   //$('body').addClass('page-error')
 }
+
+/* 
+  === Interações para quando o usuario é convidado === 
+*/
+$('#make-invite-call').click(function(){
+    var call = peer.call($('#callto-invite-id').val(), window.localStream);
+    $('.friend_invite').hide();
+    step3(call);
+});
+
+if($.urlParam('friend_id')){
+  
+  console.info('tem friend id');
+  $('.menu-functions').hide();
+  $('.friend_invite').show();
+  $('#callto-invite-id').val($.urlParam('friend_id')); 
+}else{
+  console.info('NÃO TEM friend id');
+}
+console.log('teste externo');
