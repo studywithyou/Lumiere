@@ -12,7 +12,8 @@ $.urlParam = function(name){
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
 // PeerJS object
-var peer = new Peer({ key: '7i5ex2xqq600y66r', debug: 3});
+var peer = new Peer({ key: '6jwrcs732z9f6r', debug: 3});
+//var peer = new Peer('peerjs', {host: 'http://arcane-plateau-6784.herokuapp.com', port: 80  , path: '/'});
 
 //## Quando conectar ao servidor
 peer.on('open', function(){
@@ -45,7 +46,9 @@ $(function(){
 
   $('#end-call').click(function(){
     window.existingCall.close();
+    
     step2();
+    
   });
 
   // Retry if getUserMedia fails
@@ -72,6 +75,8 @@ function step1 () {
 function step2 () {
   $('#step1, #step3').hide();
   $('#step2').show();
+  $('.box-endcall').hide();
+  $(".menu-functions").show();
   $('body').removeClass('page-load');
 }
 
@@ -84,6 +89,7 @@ function step3 (call) {
   // Wait for stream on the call, then set peer video display
   call.on('stream', function(stream){
     $(".menu-functions").hide();
+    $('.box-endcall').show();
     $('#their-video').prop('src', URL.createObjectURL(stream));
   });
 
